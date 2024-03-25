@@ -1,0 +1,48 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'checkstyle'
+    id 'java'
+    id 'idea'
+}
+
+bootJar {
+    enabled = false
+}
+
+wrapper {
+    gradleVersion = '7.0.2'
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'checkstyle'
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+    group = 'com.base'
+    version = '0.0.1-SNAPSHOT'
+
+    ext {
+        set 'okhttp3.version', '4.9.0'
+    }
+
+    checkstyle {
+        configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+        // Use config file to exclude folders
+        configProperties = ["suppressionFile": project(":").file("config/checkstyle/suppressions.xml")]
+        toolVersion = "${checkstyleVersion}"
+    }
+
+}
+

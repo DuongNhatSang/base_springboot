@@ -1,0 +1,7 @@
+ ___  _  ___ __  _ _
+| o )/ \|_ _/ _|| U |
+| o \ o || ( (_ |   |
+|___/_n_||_|\__||_n_|
+
+${application.title} ${application.version}
+Powered by Spring Boot ${spring-boot.version}

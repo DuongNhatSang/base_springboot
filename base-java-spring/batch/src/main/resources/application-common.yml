@@ -1,0 +1,13 @@
+server:
+  port: 8090
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: metahorse-batch
+  batch:
+    jdbc:
+      initialize-schema: ALWAYS
+
+race:
+  delta-time-in-millis: 100

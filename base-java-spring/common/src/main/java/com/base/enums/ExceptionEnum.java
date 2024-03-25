@@ -1,0 +1,29 @@
+package com.base.enums;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+public class ExceptionEnum {
+
+    @Getter
+    @AllArgsConstructor
+    public enum ErrorCode {
+        NOT_FOUND("NOT_FOUND", "NOT_FOUND"),
+        INVALID_STATE("INVALID_STATE", "INVALID_STATE"),
+        BAD_REQUEST("BAD_REQUEST", "BAD_REQUEST"),
+        ERROR_SYSTEM("ERROR_SYSTEM", "ERROR_SYSTEM"),
+        INVALID_ENUM_VALUE("INVALID_ENUM_VALUE", "INVALID_ENUM_VALUE"),
+        INVALID_DATA("INVALID_DATA", "INVALID_DATA"),
+        SECRET_KEY_INVALID("SECRET_KEY_INVALID", "SECRET_KEY_INVALID"),
+        POINT_NOT_ENOUGH("POINT_NOT_ENOUGH", "POINT_NOT_ENOUGH"),
+        RESOURCE_TEMPORARY_OUT("RESOURCE_TEMPORARY_OUT", "RESOURCE_TEMPORARY_OUT"),
+        HTTP_REQUEST_ERROR("HTTP_REQUEST_ERROR", "HTTP_REQUEST_ERROR"),
+        VR_CODE_OVER_TIME("VR_CODE_OVER_TIME", "VR_CODE_OVER_TIME"),
+        VR_CODE_NOT_EXISTS("VR_CODE_NOT_EXISTS", "VR_CODE_NOT_EXISTS"),
+        VR_CODE_IS_MISSING("VR_CODE_IS_MISSING", "VR_CODE_IS_MISSING"),
+        EMAIL_ALREADY_EXISTS("EMAIL_ALREADY_EXISTS", "EMAIL_ALREADY_EXISTS");
+
+        private final String code;
+        private final String display;
+    }
+}
